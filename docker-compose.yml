@@ -1,0 +1,9 @@
+text2:
+ image: ubuntu/tomcat7
+ ports: 
+    - "4555:8080"
+ volumes_from:  
+    - text1 
+text1:
+ image: yrrr/fetcher
+ command: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
